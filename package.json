@@ -5,23 +5,28 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:uikit": "cross-env-shell PL_CONFIG_PATH='${INIT_CWD}/.patternlabrc.js' npm run build --prefix node_modules/@pattern-lab/uikit-workshop -- --patternlabrc '$PL_CONFIG_PATH'",
-    "build": "patternlab build --config ./patternlab-config.json",
-    "help": "patternlab --help",
-    "install": "patternlab install --config ./patternlab-config.json",
-    "serve": "patternlab serve --config ./patternlab-config.json",
-    "start": "npm run serve",
-    "version": "patternlab --version",
-    "dev": "node ./node_modules/@pattern-lab/uikit-workshop/build-tools.js"
+    "pl:build": "patternlab build --config ./patternlab-config.json",
+    "pl:help": "patternlab --help",
+    "pl:install": "patternlab install --config ./patternlab-config.json",
+    "pl:serve": "patternlab serve --config ./patternlab-config.json",
+    "pl:version": "patternlab --version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sky4git/pattern-lab-demo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sky4git/pattern-lab-demo/issues"
+  },
+  "homepage": "https://github.com/sky4git/pattern-lab-demo#readme",
   "dependencies": {
     "@pattern-lab/cli": "^5.14.2",
     "@pattern-lab/core": "^5.14.2",
-    "@pattern-lab/engine-twig-php": "^5.14.2",
-    "@pattern-lab/starterkit-twig-demo": "^5.14.2",
+    "@pattern-lab/engine-handlebars": "^5.14.0",
+    "@pattern-lab/starterkit-handlebars-demo": "^5.14.1",
     "@pattern-lab/uikit-workshop": "^5.14.2"
   }
 }

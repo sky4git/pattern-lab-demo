@@ -72,7 +72,7 @@
       "css": "public/css"
     }
   },
-  "patternExtension": "twig",
+  "patternExtension": "hbs",
   "patternStateCascade": [
     "inprogress",
     "inreview",
@@ -93,8 +93,7 @@
   "theme": {
     "color": "light",
     "density": "compact",
-    "layout": "horizontal",
-    "noViewAll": false
+    "layout": "vertical"
   },
   "uikits": [
     {
@@ -107,59 +106,8 @@
     }
   ],
   "engines": {
-    "twig": {
-      "namespaces": [
-        {
-          "id": "atoms",
-          "recursive": true,
-          "paths": [
-            "source/_patterns/atoms"
-          ]
-        },
-        {
-          "id": "molecules",
-          "recursive": true,
-          "paths": [
-            "source/_patterns/molecules"
-          ]
-        },
-        {
-          "id": "organisms",
-          "recursive": true,
-          "paths": [
-            "source/_patterns/organisms"
-          ]
-        },
-        {
-          "id": "templates",
-          "recursive": true,
-          "paths": [
-            "source/_patterns/templates"
-          ]
-        },
-        {
-          "id": "pages",
-          "recursive": true,
-          "paths": [
-            "source/_patterns/pages"
-          ]
-        },
-        {
-          "id": "macros",
-          "recursive": true,
-          "paths": [
-            "source/_macros"
-          ]
-        }
-      ],
-      "alterTwigEnv": [
-        {
-          "file": "alter-twig.php",
-          "functions": [
-            "addCustomExtension"
-          ]
-        }
-      ]
+    "handlebars": {
+      "extend": "helpers/*.js"
     }
   }
 }

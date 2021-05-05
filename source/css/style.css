@@ -1,1481 +1,1824 @@
-/*                                                                                                                                         
-                                                ,,            ,,                          ,,                                             
- .M"""bgd mm                                    db          `7MM        mm         mm   `7MM                                    OO OO OO 
-,MI    "Y MM                                                  MM        MM         MM     MM                                    88 88 88 
-`MMb.   mmMMmm ,pW"Wq.`7MMpdMAo.     `7Mb,od8 `7MM  .P"Ybmmm  MMpMMMb.mmMMmm     mmMMmm   MMpMMMb.  .gP"Ya `7Mb,od8 .gP"Ya      || || || 
-  `YMMNq. MM  6W'   `Wb MM   `Wb       MM' "'   MM :MI  I8    MM    MM  MM         MM     MM    MM ,M'   Yb  MM' "',M'   Yb     || || || 
-.     `MM MM  8M     M8 MM    M8       MM       MM  WmmmP"    MM    MM  MM         MM     MM    MM 8M""""""  MM    8M""""""     `' `' `' 
-Mb     dM MM  YA.   ,A9 MM   ,AP       MM       MM 8M         MM    MM  MM         MM     MM    MM YM.    ,  MM    YM.    ,     ,, ,, ,, 
-P"Ybmmd"  `Mbmo`Ybmd9'  MMbmmd'      .JMML.   .JMML.YMMMMMb .JMML  JMML.`Mbmo      `Mbmo.JMML  JMML.`Mbmmd'.JMML.   `Mbmmd'     db db db 
-                        MM                         6'     dP                                                                             
-                      .JMML.                       Ybmmmd'                                                                               
-
-Pattern Lab doesn't have any CSS requirements, which means you can write your styles however you want. Hooray!
-You can use Sass, Less, vanilla CSS, or some other crazy thing I haven't heard of yet.
-So please don't use these styles. They're just here to put together the demo, and nothing more.
-They're intentionally gray, boring, and crappy because you're supposed to do this stuff yourself.
-
-Atomic design is philosophically complimentary with these CSS approaches:
-
-* SMACSS by Jonathan Snook http://smacss.com/
-* OOCSS by Nicole Sullivan http://oocss.org/
-* BEM CSS Methology : http://bem.info/method/
-* CSS Guidelines by Harry Roberts : https://cssguidelin.es/
-
-So feel free to use any of these approaches. Or don't. It's totally up to you.
-
-*/
 /*------------------------------------*\
-    $TABLE OF CONTENTS 
-    based generally on Harry Roberts excellent CSS Guidelines https://cssguidelin.es/
+    #TABLE OF CONTENTS
 \*------------------------------------*/
 /**
- * VARIABLES..............................Declarations of Sass variables 
- * .....Colors
- * .....Typography
- * .....Layout
- * .....Defaults
- * .....Breakpoints
- * MIXINS.................................Sass mixins 
- * RESET..................................Set reset defaults
- * GLOBAL CLASSES.........................Set reset defaults
- * GLOBAL ELEMENTS........................Establish global styles
- * .....Main
- * .....Headings
- * .....Text-related elements (p, blockquote, lists)
- * .....Defaults
- * .....Breakpoints
- * TYPOGRAPHY------------------------------
- * MEDIA------------------------------
- * LAYOUT------------------------------
- * NAVIGATION------------------------------
- * TOC To Be Continued
+ * ABSTRACTS..............................Declarations of Sass variables & mixins
+ * BASE...................................Default element styles
+ * LAYOUT.................................Layout-specific styles
+ * COMPONENTS.............................Component styles
+ * UTILITIES..............................Utility classes
  */
 /*------------------------------------*\
-    $VARIABLES
+    #ABSTRACTS
 \*------------------------------------*/
 /*------------------------------------*\
-    $MIXINS
+    #VARIABLES
 \*------------------------------------*/
-/* CSS Transition
-	Usage: @include transition(width,0.3s,ease-out);
+/**
+ * CONTENTS
+ *
+ * COLORS
+ * Brand Colors...............Globally-available variables and config
+ * Neutral Colors.............Grayscale colors, including white and black
+ * Utility Colors.............Info, Warning, Error, Success
+ *
+ * TYPOGRAPHY
+ * Font Families..............The fonts used in the design system
+ * Sizing.....................Font sizing
+ *
+ * LAYOUT
+ * Max-widths.................Maximum layout container width
+ *
+
+ * SPACING
+ * Spacing defaults...........Spacing between elements
+ *
+ * BORDERS
+ * Border Width...............Border thicknesses
+ * Border Radius..............Border radius definitions
+ *
+ * ANIMATION
+ * Animation Speed............Transition/animation speed variables
+ * Animation easing...........Easing variables
+ *
+ * BREAKPOINTS
+ * Breakpoints................Global breakpoint definitions
  */
-/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
-	Usage: @include font-size(1, large);
+/*------------------------------------*\
+     #COLORS
+ \*------------------------------------*/
+/**
+ * Brand Colors
+ * 1) Brand=specific colors
+ */
+/**
+ * Neutral Colors
+ * 1) Neutral colors are grayscale values used throughout the UI
+ */
+/**
+ * Utility Colors
+ * 1) Utility colors are colors used to provide feedback, such as alert messages,
+ *    form validation, etc.
+ */
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Font Family
+ */
+/**
+ * Font Sizing
+ */
+/**
+ * Line Height
+ */
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+ * Max Width
+ */
+/*------------------------------------*\
+    #SPACING
+\*------------------------------------*/
+/**
+ * Spacing and offsets
+ * 1) Used to space grids and body padding
+ */
+/*------------------------------------*\
+    #BORDERS
+\*------------------------------------*/
+/**
+ * Border
+ */
+/**
+ * Border radius
+ */
+/*------------------------------------*\
+    #ANIMATION
+\*------------------------------------*/
+/**
+ * Transition Speed
+ */
+/**
+ * Transition Ease
+ */
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints used in media queries
+ * 1) These are not the only breakpoints used, but they provide a few defaults
+ */
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+/**
+ * Body Styles
+ * 1) Prevent Mobile Safari from scaling up text: https://blog.55minutes.com/2012/04/iphone-text-resizing/
+ */
+/**
+ * XL Type Styles
+ */
+/**
+ * XL Heading Styles
+ */
+/**
+ * XL Heading Styles
+ */
+/**
+ * Large Heading Styles
+ */
+/**
+ * Medium 2 Heading Styles
+ */
+/**
+ * Medium Heading Styles
+ */
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+/**
+ * In this file, we take the literal colors from our palette (defined in variables.scss)
+ * and define them against variables that we can utilise anywhere throughout the project.
+ */
+/*------------------------------------*\
+    #GLOBAL TEXT COLOR
+\*------------------------------------*/
+/**
+ * Body text and background colors
+ */
+/**
+ * Highlight colors
+ */
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+/**
+ * In this file, we take the literal colors from our palette and define them
+ * against variables that we can utilise anywhere throughout the project.
+ */
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+/**
+ * Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+* {
+  box-sizing: border-box; }
+
+/**
+ * 1) Zero out margins and padding for elements
+ */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * 1) Set HTML5 elements to display: block
+ */
+header, footer, nav, section, article, figure {
+  display: block; }
+
+/*------------------------------------*\
+    #BODY
+\*------------------------------------*/
+/**
+ * HTML base styles
+ * 1) Set the html element's height to at least 100% of the viewport.
+ *    This is used to achieve a sticky footer
+ */
+html {
+  min-height: 100vh;
+  /* 1 */ }
+
+/**
+ * Body base styles
+ * 1) Set the body element's height to at least 100% of the viewport.
+ *    This is used to achieve a sticky footer
+ */
+body {
+  min-height: 100vh;
+  /* 1 */
+  font-family: "Raleway", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  /* 1 */
+  background-color: #fff;
+  color: #131313; }
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+/**
+ * Link base styles
+ */
+a {
+  color: #444;
+  text-decoration: none;
+  outline: 0;
+  transition: color 0.15s ease-out; }
+  a:hover, a:focus {
+    color: #ba6333; }
+  a:active {
+    color: #131313; }
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+/**
+ * 1) List base styles
+ */
+/**
+  * Remove list styles from unordered and ordered lists
+  */
+ol, ul {
+  list-style: none; }
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+h1, h2, h3, h4 {
+  font-family: "Abel", serif;
+  text-transform: uppercase; }
+
+/**
+ * Heading 1 base styles
+ */
+h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 1.2; }
+  @media all and (min-width: 47em) {
+    h1 {
+      font-size: 4rem; } }
+
+/**
+ * Heading 2 base styles
+ */
+h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.2; }
+
+/**
+ * Heading 3 base styles
+ */
+h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.2; }
+
+/**
+ * Heading 4 base styles
+ */
+h4 {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.2; }
+
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+/**
+ * 1) Form element base styles
+ */
+/**
+ * Input placeholder text base styles
+ */
+::-webkit-input-placeholder {
+  color: #808080; }
+
+::-moz-placeholder {
+  color: #808080; }
+
+:-ms-input-placeholder {
+  color: #808080; }
+
+/**
+ * Fieldset base styles
+ */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+/**
+ * Legend base styles
+ */
+legend {
+  margin-bottom: 0.25rem; }
+
+/**
+ * Label base styles
+ */
+label {
+  display: block;
+  padding-bottom: 0.25rem;
+  color: #131313; }
+
+/**
+ * Add font size 100% of form element and margin 0 to these elements
+ */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 0; }
+
+/**
+ * Text area base styles
+ */
+textarea {
+  resize: none; }
+
+/**
+ * Input  and text area base styles
+ */
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  background: #fff; }
+  input:focus, textarea:focus {
+    border-color: #131313; }
+  input:disabled, textarea:disabled {
+    border-color: #eee;
+    background: #eee;
+    color: #808080; }
+
+/**
+ * Remove webkit appearance styles from these elements
+ */
+input[type=text], input[type=search], input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration, input[type=url], input[type=number], textarea {
+  -webkit-appearance: none; }
+
+/**
+ * Checkbox and radio button base styles
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.3rem;
+  border-color: #444; }
+
+/**
+ * Search input base styles
+ */
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+/**
+ * Select
+ * 1) Remove default styling
+ */
+select {
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #444;
+  border-radius: 0;
+  padding: 0.5rem;
+  height: 2rem;
+  background: #fff;
+  color: #131313; }
+  select:focus {
+    border-color: #131313; }
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/**
+ * Button and submit inputs reset
+ * 1) These should be styled using c-btn
+ */
+button {
+  cursor: pointer; }
+
+/*------------------------------------*\
+    #MAIN ELEMENT
+\*------------------------------------*/
+/**
+ * Main element
+ */
+[role=main] {
+  display: block;
+  flex: 1 0 auto; }
+
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+/**
+ * Responsive image styling
+ * 1) Allows for images to flex with varying screen size
+ */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*------------------------------------*\
+    #TEXT
+\*------------------------------------*/
+/**
+ * Paragraph base styles
+ */
+p {
+  margin-bottom: 1rem; }
+
+/**
+ * Blockquote base styles
+ */
+blockquote {
+  font-style: italic;
+  border-left: 1px solid #808080;
+  color: #808080;
+  padding-left: 1rem;
+  margin-bottom: 1rem; }
+
+/**
+ * Horizontal rule base styles
+ */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 1rem 0; }
+
+/**
+ * Selection styles
+ */
+::-moz-selection {
+  color: #131313;
+  background: #ddd;
+  /* Gecko Browsers */ }
+
+::selection {
+  color: #131313;
+  background: #ddd;
+  /* WebKit/Blink Browsers */ }
+
+/**
+ * Code base styles
+ */
+code {
+  display: inline-block;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: .2rem .5rem;
+  line-height: 1.2;
+  font-size: .85rem; }
+
+/**
+ * Preformatted text base styles
+ */
+pre {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  /**
+	 * Remove border from code within preformatted text block
+	 */ }
+  pre code {
+    border: 0; }
+
+/**
+ * Code with languages associated with them
+ * 1) Override Prism sysles for code blocks with language
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: monospace !important; }
+
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+/**
+ * Table
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%; }
+
+/**
+ * Table header cell
+ */
+th {
+  text-align: left; }
+
+/**
+ * Table row
+ */
+tr {
+  vertical-align: top; }
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+ * Layout Container
+ * 1) Caps the width of the content to the maximum width
+ *    and centers the container
+ */
+.l-container {
+  max-width: 80rem;
+  padding: 0 1rem;
+  margin: 0 auto; }
+  @media all and (min-width: 60em) {
+    .l-container {
+      padding: 0 2rem; } }
+
+.l-container--narrow {
+  max-width: 45rem; }
+
+/**
+ *
+ * 1) This caps the width of text passages
+ *    to achieve a comfortable line length
+ */
+.l-linelength-container {
+  max-width: 36rem; }
+
+.l-band {
+  background: #f9f9f9;
+  padding: 2rem 1rem; }
+
+/**
+ * 2 column layout
+ */
+.l-page-layout--two-column {
+  display: flex;
+  flex-direction: column; }
+  @media all and (min-width: 60em) {
+    .l-page-layout--two-column {
+      flex-direction: row; } }
+
+@media all and (min-width: 60em) {
+  .l-page-layout--two-column .l-page-layout__main {
+    width: 70%;
+    padding-right: 1rem; } }
+
+/**
+ * Sidebar
+ */
+@media all and (min-width: 60em) {
+  .l-page-layout--two-column .l-page-layout__secondary {
+    width: 30%;
+    margin-left: 2rem; } }
+
+.l-page-layout--reversed .l-page-layout__secondary {
+  margin-bottom: 2rem; }
+  @media all and (min-width: 60em) {
+    .l-page-layout--reversed .l-page-layout__secondary {
+      order: 1;
+      margin-bottom: 0; } }
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+/**
+ * Grid Container
+ */
+.l-grid {
+  display: flex;
+  flex-wrap: wrap; }
+  @supports (display: grid) {
+    .l-grid {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      margin: 0; } }
+
+/**
+ * Grid Item
+ */
+.l-grid__item {
+  display: flex; }
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/**
+ *
+ * 1) Button or link that has functionality to it
+ */
+.c-btn {
+  display: inline-block;
+  border: 1px solid #131313;
+  background: #114689;
+  color: #fff;
+  line-height: 1;
+  padding: 1rem 2rem;
+  border: 0;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.15s ease-out; }
+  .c-btn:hover, .c-btn:focus {
+    color: #fff;
+    background: #041544; }
+
+.c-btn--bare {
+  background: none;
+  color: #114689;
+  border: 1px solid transparent; }
+  .c-btn--bare:hover, .c-btn--bare:focus {
+    background: none;
+    color: #114689;
+    border-color: #114689; }
+
+/*
+ * Inner container wrapper
+ * 1) Container is direct decendant of <button>, since there's
+ *    a bug with applying flexbox directly to a <button>
+ * 2) Only needs to be used for buttons containing both icons and text
+ */
+.c-btn__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/*
+ * Button icon
+ */
+.c-btn__icon {
+  width: 1rem;
+  height: 1rem;
+  fill: #fff;
+  transition: fill 0.15s ease-out; }
+
+/*------------------------------------*\
+   #DEFINITION LIST
+\*------------------------------------*/
+/**
+* 1) Definition list (`dl`) that contains a definition term (`dt`) and a definition description (`dd`)
+*/
+.c-definition-list {
+  margin: 0 0 1rem; }
+
+/**
+* Definition list item
+*/
+.c-definition-list__item {
+  display: flex; }
+  @media all and (min-width: 60em) {
+    .c-definition-list__item {
+      justify-content: space-between; } }
+
+/**
+* Definition list term
+*/
+.c-definition-list__term {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  width: 5rem; }
+  @media all and (min-width: 60em) {
+    .c-definition-list__term {
+      width: auto; } }
+
+/**
+* Definition list description
 */
 /*------------------------------------*\
-    $RESET
+   #DEFINITION LIST LIST
 \*------------------------------------*/
-/* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/**
+* 1) List of definition lists
+*/
+/**
+ * Definition list list item
+ */
+.c-definition-list-list--lined .c-definition-list-list__item {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd; }
 
-html,
-body,
-div,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-ol,
-ul,
-li,
-form,
-legend,
-label,
-table,
-header,
-footer,
-nav,
-section,
-figure {
-  margin: 0;
-  padding: 0;
-}
-
-header,
-footer,
-nav,
-section,
-article,
-hgroup,
-figure {
+/*------------------------------------*\
+	#HERO BLOCK
+\*------------------------------------*/
+/**
+ * 1) Sit hero flush with header. Normally we wouldn't 
+ *    do this and handle margin using utility classes,
+ *    but we're taking a shortcut for a demo.
+ */
+.c-hero {
   display: block;
-}
+  position: relative;
+  margin: -2rem 0 2rem;
+  /* 1 */ }
+
+/**
+ * Hero Image
+ * 1) This is the primary hero image that runs full-bleed across the layout
+ */
+.c-hero__img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  max-height: 70vh;
+  overflow: hidden; }
+
+.c-hero__body {
+  background: #ba6333;
+  padding: 1rem; }
+  @media all and (min-width: 35em) {
+    .c-hero__body {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 20%, #000 100%); } }
+
+/**
+ * Hero Headline
+ * 1) This sits overtop of the hero image when space permits
+ */
+.c-hero__headline {
+  text-transform: uppercase;
+  font-size: 3rem;
+  background-color: #ba6333;
+  color: #fff;
+  transition: all 0.15s ease-out; }
+  @media all and (min-width: 35em) {
+    .c-hero__headline {
+      padding: 0 0.4rem;
+      font-size: 4rem; } }
 
 /*------------------------------------*\
-    $GLOBAL ELEMENTS
+	#TOUT BLOCK
 \*------------------------------------*/
-/*------------------------------------*\
-    $GLOBAL CLASSES
-\*------------------------------------*/
-/* Clearfix */
-.cf,
-.l-two-col,
-[role='main'] {
-  *zoom: 1;
-}
+/**
+ * 1) The tout block contains an image and headline overlayed over the image.
+ */
+.c-tout {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 1024px; }
 
-.cf:before,
-.l-two-col:before,
-[role='main']:before,
-.cf:after,
-.l-two-col:after,
-[role='main']:after {
-  content: ' ';
-  /* 1 */
-  display: table;
+/**
+ *  Tout image
+ */
+.c-tout__img {
+  display: block; }
+
+/**
+ *  Tout headline
+ */
+.c-tout__headline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  transition: all 0.15s ease-out; }
+  .c-tout:hover .c-tout__headline, .c-tout:focus .c-tout__headline {
+    padding-bottom: 2rem;
+    background: #114689; }
+
+/*------------------------------------*\
+    #SECTION HEADER
+\*------------------------------------*/
+/**
+ * 1) A group of text with a title that headlines a section
+ */
+.c-section__header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1rem; }
+  .c-section__header:after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 2px;
+    margin-left: 1rem;
+    background: #ba6333; }
+
+.c-section__title {
+  font-size: 2rem; }
+
+/*------------------------------------*\
+    #STACKED BLOCK
+\*------------------------------------*/
+/**
+ * 1) A link block consisting of media, headline, and description all stacked on top
+ * of each other
+ * 2) Capped for demo purposes
+ */
+.c-stacked-block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 600px;
   /* 2 */
-}
+  transition: transform 0.15s ease-out; }
+  .c-stacked-block:hover, .c-stacked-block:focus {
+    transform: scale(1.03); }
 
-.cf:after,
-.l-two-col:after,
-[role='main']:after {
-  clear: both;
-}
+.c-stacked-block__body {
+  flex: 1; }
 
-/* Completely remove from the flow and screen readers. */
-.is-hidden {
+.c-stacked-block__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #114689;
+  transition: color 0.15s ease-out; }
+  .c-stacked-block:hover .c-stacked-block__title, .c-stacked-block:focus .c-stacked-block__title {
+    color: #ba6333; }
+
+.c-stacked-block__excerpt {
+  margin-bottom: 0;
+  color: #444; }
+
+.c-stacked-block__meta {
+  color: #114689;
+  font-size: 1.2rem;
+  font-family: "Abel", serif;
+  margin-bottom: 0;
+  transition: color 0.15s ease-out; }
+  .c-stacked-block:hover .c-stacked-block__meta, .c-stacked-block:focus .c-stacked-block__meta {
+    color: #ba6333; }
+
+.c-stacked-block__badge {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-family: "Abel", serif;
+  text-transform: uppercase;
+  color: #fff;
+  background: #ba6333; }
+
+.c-stacked-block__optional {
+  margin-left: 0.5rem;
+  color: #808080;
+  font-family: "Abel", serif;
+  font-size: 0.85rem;
+  text-decoration: line-through; }
+
+/*------------------------------------*\
+    #STRIPE
+\*------------------------------------*/
+/**
+ * 1) Block that contains a right and left column of text and other possible components
+ */
+.c-stripe {
+  padding: 2rem 0; }
+  @media all and (min-width: 35em) {
+    .c-stripe {
+      display: flex; } }
+  .c-stripe-list--condensed .c-stripe {
+    padding: 1rem 0; }
+
+/**
+ * Stripe lef container
+ * 1) Contains elements that display on the left side of the stripe
+ */
+.c-stripe__left-container {
+  margin-right: 2rem; }
+  @media all and (min-width: 35em) {
+    .c-stripe__left-container {
+      width: 20%; } }
+  .c-stripe-list--condensed .c-stripe__left-container {
+    display: none; }
+
+.c-stripe__link {
+  display: block; }
+  @media all and (min-width: 35em) {
+    .c-stripe__link {
+      max-width: 10rem; } }
+
+/**
+ * Stripe right container
+ * 1) Contains elements that display on the right side of the stripe
+ */
+.c-stripe__right-container {
+  flex: 1; }
+  @media all and (min-width: 35em) {
+    .c-stripe__right-container {
+      display: flex;
+      align-items: center; } }
+
+.c-stripe__title {
+  margin-bottom: 2rem; }
+  @media all and (min-width: 35em) {
+    .c-stripe__title {
+      margin-bottom: 0;
+      margin-right: 2rem;
+      width: 40%; } }
+
+@media all and (min-width: 35em) {
+  .c-stripe__meta {
+    margin-left: 2rem;
+    margin-bottom: 2.25rem;
+    width: 20%;
+    text-align: right;
+    flex: 1; } }
+
+.c-stripe__meta-label {
+  font-weight: bold;
+  margin-bottom: 0.75rem; }
+
+.c-stripe__meta-span {
+  font-family: "Abel", serif;
+  color: #114689;
+  font-size: 1.2rem; }
+
+/*------------------------------------*\
+    #STRIPE LIST
+\*------------------------------------*/
+/**
+ * 1) Block that contains a right and left column of text and other possible components
+ */
+.c-stripe-list__item {
+  border-bottom: 1px solid #ddd; }
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/**
+ * 1) Global block at the bottom of each page that contains a navigation and other information
+ */
+.c-footer {
+  padding: 2rem 0;
+  margin-top: 2rem;
+  background: #041544; }
+
+@media all and (min-width: 47em) {
+  .c-footer__inner {
+    display: flex; } }
+
+@media all and (min-width: 47em) {
+  .c-footer__bottom {
+    margin-left: auto; } }
+
+.c-footer__credit, .c-footer__copyright {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Abel", serif;
+  font-size: 0.85rem; }
+  .c-footer__credit a, .c-footer__copyright a {
+    color: #ba6333; }
+    .c-footer__credit a:hover, .c-footer__credit a:focus, .c-footer__copyright a:hover, .c-footer__copyright a:focus {
+      color: #808080; }
+
+/*------------------------------------*\
+    #FOOTER NAV
+\*------------------------------------*/
+/**
+ * 1) Global block at the bottom of each page that contains a navigation and other information
+ */
+.c-footer-nav {
+  margin-bottom: 2rem; }
+  @media all and (min-width: 47em) {
+    .c-footer-nav {
+      display: flex;
+      margin-bottom: 0; } }
+
+@media all and (min-width: 47em) {
+  .c-footer-nav__item {
+    margin-right: 2rem; }
+    .c-footer-nav__item:last-child {
+      margin-right: 0; } }
+
+.c-footer-nav__link {
+  color: #fff;
+  font-family: "Abel", serif;
+  text-transform: uppercase;
+  font-size: 1.2rem; }
+
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+/**
+ * Global block at the top of each page containing the navigation, logo, and other potential contents
+ */
+.c-header {
+  position: relative;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd; }
+
+/**
+ * Header inner
+ */
+.c-header__inner {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media all and (min-width: 35em) {
+    .c-header__inner {
+      display: flex;
+      align-items: center; } }
+
+/**
+ * Header navigation button
+ * 1) Button used to toggle the navigation on/off on small screens
+ */
+.c-header__nav-btn {
+  margin-left: auto; }
+  @media all and (min-width: 70em) {
+    .c-header__nav-btn {
+      display: none; } }
+
+/**
+ * Header navigation conntainer
+ * 1) Contains the primary navigation and other possible patterns
+ */
+.c-header__nav-container {
+  display: none;
+  /**
+	 * Header navigation conntainer within vertical header
+	 */ }
+  @media all and (min-width: 70em) {
+    .c-header__nav-container {
+      display: block;
+      margin-left: auto; } }
+  @media all and (min-width: 70em) {
+    .c-header--vertical .c-header__nav-container {
+      margin-left: 0; } }
+
+/**
+ * Active header nav container
+ */
+.c-header__nav-container.is-active {
+  display: block;
+  position: absolute;
+  background: #eee;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 1rem;
+  /**
+	 * Active header nav container within vertical header
+	 */ }
+  @media all and (min-width: 70em) {
+    .c-header__nav-container.is-active {
+      display: block;
+      position: static;
+      padding: 0;
+      margin-left: auto;
+      width: inherit; } }
+  @media all and (min-width: 70em) {
+    .c-header--vertical .c-header__nav-container.is-active {
+      margin-left: 0;
+      width: 100%; } }
+
+/*------------------------------------*\
+    #LOGO
+\*------------------------------------*/
+/**
+ * Branding image or text of the site
+ */
+.c-logo {
+  font-size: 2rem; }
+  .c-footer .c-logo {
+    margin-bottom: 2rem; }
+    @media all and (min-width: 47em) {
+      .c-footer .c-logo {
+        margin-bottom: 0; } }
+
+/**
+ * Logo link
+ */
+.c-logo__link {
+  display: block; }
+
+/**
+ * Logo image
+ */
+.c-logo__img {
+  display: block; }
+
+.c-logo__left {
+  color: #114689; }
+  .c-logo--light .c-logo__left {
+    color: #fff; }
+
+.c-logo__right {
+  color: #ba6333; }
+
+/*------------------------------------*\
+    #ICON
+\*------------------------------------*/
+/**
+ * 1) Small image that represents functionality
+ */
+.c-icon {
+  height: 16px;
+  width: 16px; }
+
+/*------------------------------------*\
+    #INPUT
+\*------------------------------------*/
+/**
+ * 1) Actual input of a field
+ */
+.c-stripe .c-input {
+  max-width: 3rem; }
+
+/*------------------------------------*\
+    #PAGE HEADER
+\*------------------------------------*/
+/**
+ * 1) Container that consists of of a page header title and description
+ */
+/**
+ * Page header title
+ */
+.c-page-header {
+  margin-top: 4rem;
+  margin-bottom: 2rem; }
+
+/**
+ * Page description
+ */
+.c-page-header__desc {
+  margin-top: 1rem; }
+
+/*------------------------------------*\
+    #PAGINATION
+\*------------------------------------*/
+/**
+ * Pagination
+ */
+.c-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  font-family: "Abel", serif;
+  text-transform: uppercase; }
+
+.c-pagination__item {
+  border-right: 1px solid #ddd; }
+  .c-pagination__item:last-child {
+    border: 0; }
+
+.c-pagination__link {
+  padding: 1rem;
+  text-decoration: underline; }
+  .c-pagination__item:first-child .c-pagination__link {
+    padding-left: 0; }
+  .c-pagination__item.is-active .c-pagination__link {
+    font-weight: bold;
+    text-decoration: none;
+    pointer-events: none; }
+  .c-pagination__item.is-disabled .c-pagination__link {
+    color: #ddd;
+    pointer-events: none;
+    text-decoration: none; }
+
+/*------------------------------------*\
+    #PRIMARY NAVIGATION
+\*------------------------------------*/
+/**
+ * Primary navigation existing in the header and maybe the footer
+ */
+@media all and (min-width: 32em) {
+  .c-primary-nav {
+    margin-left: auto; } }
+
+/**
+ * Primary navigation list
+ */
+.c-primary-nav__list {
+  display: flex;
+  align-items: center; }
+
+/**
+ * Primary navigation item
+ */
+.c-primary-nav__item {
+  margin-right: 2rem; }
+  .c-primary-nav__item:last-child {
+    margin-right: 0; }
+
+/**
+ * Primary navigation link
+ */
+.c-primary-nav__link {
+  display: block;
+  cursor: pointer;
+  font-family: "Abel", serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: background 0.15s ease-out; }
+  .c-primary-nav__link:hover, .c-primary-nav__link:focus {
+    color: #ba6333; }
+
+.c-primary-nav__icon.c-icon {
+  fill: #041544;
+  height: 24px;
+  width: 24px; }
+
+/*------------------------------------*\
+    #PROMO BLOCK
+\*------------------------------------*/
+/**
+ * Large block containing an image and copy
+ * 1) Move promo block up to sit flush with hero
+ *    Normally we wouldn't do this, but we're taking
+ *    a shortcut for demo purposes.
+ */
+.c-promo-block {
+  color: #fff;
+  position: relative;
+  margin-top: -2rem;
+  /* 1 */ }
+
+.c-promo-block__media {
+  position: relative;
+  z-index: 0; }
+  .c-promo-block__media:before {
+    content: "";
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .c-promo-block--right .c-promo-block__media:before {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 20%, #000 100%); }
+
+.c-promo-block__body {
+  position: absolute;
+  top: 40%;
+  left: 4rem;
+  z-index: 1;
+  max-width: 400px;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+  .c-promo-block--right .c-promo-block__body {
+    left: auto;
+    right: 4rem; }
+  .c-promo-block__body.c-promo-block__body--initial {
+    opacity: 0;
+    transform: translateY(70px); }
+
+.c-promo-block__img {
+  display: block;
+  width: 100%; }
+
+.c-promo-block__link {
+  color: #fff; }
+  .c-promo-block__link:hover, .c-promo-block__link:focus {
+    color: #ba6333; }
+
+.c-promo-block__heading {
+  display: inline;
+  color: inherit;
+  border-bottom: 2px solid #ba6333;
+  font-size: 2rem; }
+  @media all and (min-width: 60em) {
+    .c-promo-block__heading {
+      font-size: 3rem; } }
+
+.c-promo-block__description {
+  margin-top: 1rem; }
+  @media all and (min-width: 60em) {
+    .c-promo-block__description {
+      font-size: 1.2rem; } }
+
+/*------------------------------------*\
+    #PROGRESS TRACKER
+\*------------------------------------*/
+/**
+ * 1) Ordered list showing progress (i.e. step by step)
+ * 2) Display flex used to put items in row. Flex wrap wraps items underneat when space is
+ *    unavailable.
+ */
+.c-progress-tracker {
+  display: flex;
+  /* 2 */
+  justify-content: center;
+  flex-wrap: wrap;
+  /* 2 */ }
+
+/* Progress tracker iterm */
+.c-progress-tracker__item {
+  margin-right: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  width: 5rem;
+  /* Don't display the horizontal line on the last item number */ }
+  .c-progress-tracker__item:last-child .c-progress-tracker__number:before {
+    display: none; }
+
+.c-progress-tracker__number {
+  padding: .125rem;
+  margin-bottom: .5rem;
+  color: #114689;
+  border: 1px solid #114689;
+  background-color: #fff;
+  position: relative; }
+  @media all and (min-width: 28em) {
+    .c-progress-tracker__number {
+      padding: .5rem; } }
+  .is-complete .c-progress-tracker__number {
+    background-color: #ddd;
+    border-color: #ddd; }
+  .is-current .c-progress-tracker__number {
+    color: #fff;
+    background-color: #114689;
+    font-weight: bold; }
+  .is-disabled .c-progress-tracker__number {
+    color: #041544;
+    border-color: #114689; }
+  .c-progress-tracker__number:before {
+    content: " ";
+    display: block;
+    width: 4rem;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    right: -4rem;
+    z-index: -1; }
+
+.c-progress-tracker__label {
+  display: none;
+  /* Do show it on larger screens */ }
+  @media all and (min-width: 35em) {
+    .c-progress-tracker__label {
+      display: inline; } }
+  .is-current .c-progress-tracker__label {
+    font-weight: bold; }
+
+/*------------------------------------*\
+    #TEXT PASSAGE
+\*------------------------------------*/
+/**
+ * 1) A passage of text, including various components (i.e. article, blog post)
+ */
+.c-text-passage {
+  /**
+	 * Link within the text passage
+	 */
+  /**
+	 * Blockquote within text passage
+	 */
+  /**
+	  * First-level heading within text passage
+	  */
+  /**
+	 * Second-level heading within text passage
+	 */
+  /**
+	 * Third-level heading within text passage
+	 */
+  /**
+	 * Fourth-level heading within text passage
+	 */
+  /**
+	 * Fifth-level heading within text passage
+	 */
+  /**
+	 * Sixth-level heading within text passage
+	 */
+  /**
+	 * Unordered list within text passage
+	 */
+  /**
+	 * Ordered list within text passage
+	 */ }
+  .c-text-passage p {
+    margin-bottom: 1rem; }
+  .c-text-passage a {
+    text-decoration: underline; }
+  .c-text-passage blockquote {
+    padding-left: 0.8rem;
+    border-left: 3px solid #444;
+    color: #808080;
+    font-size: 1rem; }
+  .c-text-passage h1 {
+    margin-bottom: 1rem; }
+  .c-text-passage h2 {
+    margin: 1rem 0 1rem;
+    color: #444;
+    font-weight: bold; }
+  .c-text-passage h3 {
+    margin: 1rem 0 1rem; }
+  .c-text-passage h4 {
+    margin: 1rem 0 1rem; }
+  .c-text-passage h5 {
+    margin: 1rem 0 1rem; }
+  .c-text-passage h6 {
+    margin: 1rem 0 1rem; }
+  .c-text-passage ul {
+    list-style: disc;
+    margin-left: 1rem;
+    margin-bottom: 1rem; }
+    .c-text-passage ul li:last-child {
+      margin-bottom: 0; }
+  .c-text-passage ol {
+    list-style: decimal;
+    margin-left: 1rem;
+    margin-bottom: 1rem; }
+    .c-text-passage ol li:last-child {
+      margin-bottom: 0; }
+  .c-text-passage li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6; }
+
+/*------------------------------------*\
+    #FIELDS
+\*------------------------------------*/
+/**
+ * 1) Consists of a label, form control, and an optional note about the field.
+ */
+.c-field {
+  margin-bottom: 2rem; }
+
+/**
+ * Field label
+ */
+.c-field__label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold; }
+
+/**
+ * Field body
+ */
+.c-field__body {
+  position: relative; }
+
+/**
+ * Field note
+ */
+.c-field__note {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #808080; }
+
+/*------------------------------------*\
+    #SEARCH FORM
+\*------------------------------------*/
+/**
+ * 1) Search form that contains a text input and button
+ */
+/**
+ * Page header title
+ */
+.c-search-form__body {
+  display: flex; }
+
+.c-stacked-block-list {
+  max-width: 80rem;
+  margin-bottom: 2rem; }
+
+/*------------------------------------*\
+	#TOTAL CONTAINER
+\*------------------------------------*/
+/**
+ * 1)
+ */
+.c-total-container {
+  margin-top: 1rem; }
+  @media all and (min-width: 35em) {
+    .c-total-container {
+      text-align: right; } }
+
+.c-total {
+  display: flex;
+  align-items: center; }
+  @media all and (min-width: 35em) {
+    .c-total {
+      justify-content: flex-end; } }
+
+.c-total--no-break {
+  justify-content: flex-start; }
+  @media all and (min-width: 60em) {
+    .c-total--no-break {
+      justify-content: flex-end; } }
+
+.c-total__label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  padding-bottom: 0; }
+  .c-total--no-break .c-total__label {
+    width: 5rem; }
+    @media all and (min-width: 60em) {
+      .c-total--no-break .c-total__label {
+        width: auto; } }
+
+.c-total__span {
+  font-family: "Abel", serif;
+  font-size: 1.2rem;
+  color: #114689; }
+  .c-total--no-break .c-total__span {
+    margin-left: 2rem; }
+    @media all and (min-width: 60em) {
+      .c-total--no-break .c-total__span {
+        margin-left: 0; } }
+
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+/*------------------------------------*\
+    #VISIBILITY CLASSES
+\*------------------------------------*/
+/**
+ * Is Hidden
+ * 1) Completely remove from the flow and screen readers.
+ */
+.u-is-hidden {
   display: none !important;
-  visibility: hidden !important;
-}
+  visibility: hidden !important; }
 
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
+/**
+ * Is Visibly Hidden
+ * 1) Completely remove from the flow but leave available to screen readers.
+ */
+.u-is-vishidden {
   position: absolute !important;
   overflow: hidden;
   width: 1px;
   height: 1px;
   padding: 0;
   border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* Floats */
-.right {
-  float: right;
-  padding: 0 0 1em 1em;
-}
-
-.right-search {
-  float: right;
-  padding: 0 0 1em 0;
-}
-
-.left {
-  float: left;
-  padding: 0 1em 1em 0;
-}
-
-/* Text-Align */
-.align-right {
-  text-align: right;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-left {
-  text-align: left;
-}
-
-/* Display Classes */
-@media all and (max-width: 46.8em) {
-  .hide-small {
-    display: none;
-  }
-}
-
-@media all and (min-width: 46.8em) and (max-width: 50em) {
-  .hide-med {
-    display: none;
-  }
-}
-
-@media all and (min-width: 50em) {
-  .hide-large {
-    display: none;
-  }
-}
-
-.valid {
-  color: #089e00;
-}
-
-.error {
-  color: red;
-}
-
-.warning {
-  color: #fff664;
-}
-
-.information {
-  color: #000db5;
-}
-
-.font-secondary {
-  font-family: Georgia, Times, 'Times New Roman', serif;
-}
-
-body {
-  background: white;
-  font: 100%/1.5 'HelveticaNeue', 'Helvetica', 'Arial', sans-serif;
-  -webkit-text-size-adjust: 100%;
-  color: #333333;
-}
-
-/* Links */
-a {
-  color: #333333;
-  text-decoration: none;
-  outline: 0;
-}
-a:hover,
-a:focus {
-  color: gray;
-}
-
-/* Headings */
-/*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
-h1,
-.alpha {
-  line-height: 1.2;
-}
-
-h2,
-.beta {
-  line-height: 1.2;
-}
-
-h3,
-.gamma {
-  line-height: 1.2;
-}
-
-/* Subheadings */
-.subheading {
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  font-weight: normal;
-}
-
-/* Text-Related Elements */
-p {
-  margin-bottom: 1em;
-}
-
-/* Blockquote */
-blockquote {
-  font-style: italic;
-  border-left: 1px solid gray;
-  color: gray;
-  padding-left: 1em;
-  margin-bottom: 1em;
-}
-
-/* Horizontal Rule */
-hr {
-  border: 0;
-  height: 2px;
-  background: #eeeeee;
-  margin: 2em 0;
-}
-
-abbr {
-  border-bottom: 1px dotted gray;
-  cursor: help;
-}
-
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Definition Lists */
-dl {
-  overflow: hidden;
-  margin: 0 0 1em;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-left: 0;
-}
+  clip: rect(1px, 1px, 1px, 1px); }
 
 /*------------------------------------*\
-    $MEDIA ELEMENTS
+    #SPACING
 \*------------------------------------*/
-/* Flexible Media */
-img,
-video,
-object {
-  max-width: 100%;
-  height: auto;
-}
-
-iframe {
-  margin-bottom: 1em;
-}
-
-figure {
-  margin-bottom: 1em;
-}
-figure img {
-  margin-bottom: 0.5em;
-}
-
-figcaption {
-  font-style: italic;
-}
-
-/*------------------------------------*\
-    $FORMS
-\*------------------------------------*/
-form ol,
-form ul {
-  list-style: none;
-  margin-left: 0;
-}
-
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
-label {
-  display: block;
-  padding-bottom: 0.5em;
-}
-
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0 1px 0;
-}
-
-input,
-textarea {
-  width: 100%;
-  border: 1px solid gray;
-  padding: 0.5em 0.65rem;
-}
-
-input[type='text'],
-input[type='search'],
-input[type='url'],
-input[type='number'],
-textarea {
-  -webkit-appearance: none;
-}
-
-button,
-input[type='submit'] {
-  padding: 0.5em;
-  background: #333333;
-  border: 1px solid gray;
-  cursor: pointer;
-}
-
-input[type='checkbox'],
-input[type='radio'] {
-  width: auto;
-  margin-right: 0.3em;
-}
-
-input[type='search'] {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.field-container {
-  margin-bottom: 1em;
-}
-
-.inline-form fieldset,
-.inline-form .inline-container {
-  position: relative;
-}
-.inline-form input[type='submit'],
-.inline-form button,
-.inline-form .btn {
-  font-size: 0.875em;
-  padding: 0.65rem 1.3rem;
-  background: #333333;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: auto;
-}
-.inline-form input[type='submit']:hover,
-.inline-form input[type='submit']:focus,
-.inline-form button:hover,
-.inline-form button:focus,
-.inline-form .btn:hover,
-.inline-form .btn:focus {
-  background: gray;
-  color: white;
-}
-
-/* Validation */
-.has-error {
-  border-color: red;
-}
-
-.is-valid {
-  border-color: #089e00;
-}
-
-/*------------------------------------*\
-    $SPECIFIC FORMS
-\*------------------------------------*/
-/* Search Form */
-.search-field {
-  padding-right: 3em;
-}
-
-.inline-form .search-submit {
-  background: none;
-  padding: 0.78em 1em;
-  border: 0;
-  border-left: 1px solid gray;
-  color: gray;
-}
-
-/*------------------------------------*\
-    $Table
-\*------------------------------------*/
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  border: 1px solid gray;
-  width: 100%;
-}
-
-th {
-  text-align: left;
-  border: 1px solid gray;
-  padding: 0.2em;
-}
-
-td {
-  border: 1px solid gray;
-  padding: 0.2em;
-}
-
-.animate-fade {
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-.animate-fade:hover {
-  opacity: 0;
-}
-
-.animate-move > .demo-shape {
-  -webkit-transition: all 0.8s ease-in-out;
-  -moz-transition: all 0.8s ease-in-out;
-  -ms-transition: all 0.8s ease-in-out;
-  -o-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
-}
-
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
-/* Layout Container */
-.lc,
-.header,
-[role='main'] {
-  max-width: 72em;
-  margin: 0 auto;
-  padding: 0.5em;
-}
-
-/*------------------------------------*\
-    $TEMPLATES
-\*------------------------------------*/
-/* Two Column Layout */
-@media all and (min-width: 50em) {
-  .l-two-col .l-main {
-    float: left;
-    width: 70%;
-    padding-right: 1em;
-  }
-}
-@media all and (max-width: 50em) {
-  .l-two-col .l-sidebar {
-    clear: both;
-  }
-}
-@media all and (min-width: 50em) {
-  .l-two-col .l-sidebar {
-    float: left;
-    width: 30%;
-    padding: 0 0 0 1em;
-  }
-}
-
-/*------------------------------------*\
-    $GRIDS
-\*------------------------------------*/
-/* Grid Container */
-.g {
-  overflow: hidden;
-  margin: 0 -0.5em;
-}
-
-/* Grid Item */
-.gi {
-  padding: 0.5em;
-}
-.gi img {
-  display: block;
-}
-@media all and (min-width: 46.8em) {
-  .gi {
-    float: left;
-  }
-}
-
-/* Grid 1up */
-.g-1up .gi {
-  width: 100%;
-}
-
-/* Grid 2up */
-@media all and (min-width: 46.8em) {
-  .g-2up > .gi {
-    float: left;
-    width: 50%;
-  }
-  .g-2up > .gi:nth-of-type(odd) {
-    clear: left;
-  }
-}
-
-/* Grid Half (Always displayed side by side) */
-.g-half > .gi {
-  float: left;
-  width: 50%;
-}
-.g-half > .gi:nth-of-type(odd) {
-  clear: left;
-}
-
-/* Grid 3up */
-@media all and (min-width: 46.8em) {
-  .g-3up > .gi {
-    float: left;
-    width: 50%;
-  }
-  .g-3up > .gi:nth-of-type(2n + 1) {
-    clear: left;
-  }
-}
-@media all and (min-width: 50em) {
-  .g-3up > .gi {
-    width: 33.3333333%;
-  }
-  .g-3up > .gi:nth-of-type(2n + 1) {
-    clear: none;
-  }
-  .g-3up > .gi:nth-of-type(3n + 1) {
-    clear: left;
-  }
-}
-
-/* Grid 4up */
-@media all and (min-width: 46.8em) {
-  .g-4up > .gi {
-    float: left;
-    width: 50%;
-  }
-  .g-4up > .gi:nth-of-type(2n + 1) {
-    clear: both;
-  }
-}
-@media all and (min-width: 50em) {
-  .g-4up > .gi {
-    width: 25%;
-  }
-  .g-4up > .gi:nth-of-type(2n + 1) {
-    clear: none;
-  }
-  .g-4up > .gi:nth-of-type(4n + 1) {
-    clear: left;
-  }
-}
-
-/* Grid Quarter (Always displayed side by side) */
-.g-quarter > .gi {
-  float: left;
-  width: 24%;
-}
-.g-quarter > .gi:nth-of-type(4n + 1) {
-  clear: left;
-}
-
-@media all and (min-width: 29.75em) {
-  .g-max4 > .gi {
-    float: left;
-    width: 50%;
-  }
-  .g-max4 > .gi:nth-of-type(2n + 1) {
-    clear: both;
-  }
-}
-@media all and (min-width: 39.8em) {
-  .g-max4 > .gi {
-    width: 33.3333333%;
-  }
-  .g-max4 > .gi:nth-of-type(2n + 1) {
-    clear: none;
-  }
-  .g-max4 > .gi:nth-of-type(3n + 1) {
-    clear: left;
-  }
-}
-@media all and (min-width: 50em) {
-  .g-max4 > .gi {
-    width: 25%;
-  }
-  .g-max4 > .gi:nth-of-type(3n + 1) {
-    clear: none;
-  }
-  .g-max4 > .gi:nth-of-type(4n + 1) {
-    clear: left;
-  }
-}
-
-/* Grid 5up */
-.g-max5 > .gi {
-  float: left;
-  width: 50%;
-}
-.g-max5 > .gi:nth-of-type(2n + 1) {
-  clear: both;
-}
-@media all and (min-width: 39.8em) {
-  .g-max5 > .gi {
-    width: 33.3333333%;
-  }
-  .g-max5 > .gi:nth-of-type(2n + 1) {
-    clear: none;
-  }
-  .g-max5 > .gi:nth-of-type(3n + 1) {
-    clear: left;
-  }
-}
-@media all and (min-width: 46.8em) {
-  .g-max5 > .gi {
-    width: 25%;
-  }
-  .g-max5 > .gi:nth-of-type(3n + 1) {
-    clear: none;
-  }
-  .g-max5 > .gi:nth-of-type(4n + 1) {
-    clear: left;
-  }
-}
-@media all and (min-width: 48em) {
-  .g-max5 > .gi {
-    width: 20%;
-  }
-  .g-max5 > .gi:nth-of-type(4n + 1) {
-    clear: none;
-  }
-  .g-max5 > .gi:nth-of-type(5n + 1) {
-    clear: left;
-  }
-}
-
-/* Grid 2/3 */
-@media all and (min-width: 46.8em) {
-  .gi-2-3 {
-    float: left;
-    width: 66.666666%;
-  }
-}
-
-@media all and (min-width: 46.8em) {
-  .gi-1-3 {
-    float: left;
-    width: 33.333333%;
-  }
-}
-
-/* Grid 4up block */
-.g-opposites .gi {
-  float: left;
-}
-.g-opposites .gi:last-child {
-  float: right;
-  text-align: right;
-}
-
-/*------------------------------------*\
-    $PAGE STRUCTURE
-\*------------------------------------*/
-.header {
-  background: white;
-  padding: 0;
-  border-bottom: 1px solid #dbdbdb;
-}
-
-.logo {
-  float: left;
-  max-width: 8rem;
-  margin: 0.4rem;
-}
-@media all and (min-width: 46.8em) {
-  .logo {
-    max-width: 9rem;
-  }
-}
-
-.nav-toggle {
-  float: right;
-  display: block;
-  padding: 0.9rem 1rem 0.7rem;
-  font-size: 1.3rem;
-  line-height: 1;
-  border-left: 1px solid #dbdbdb;
-}
-@media all and (min-width: 46.8em) {
-  .nav-toggle {
-    display: none;
-  }
-}
-@media all and (max-width: 17em) {
-  .nav-toggle {
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-  }
-}
-
-.search-form {
-  overflow: hidden;
-  max-height: 0;
-}
-@media all and (min-width: 46.8em) {
-  .search-form {
-    float: right;
-    max-height: none;
-    margin: 0.65em 0.5em 0 0;
-  }
-}
-
-/*------------------------------------*\
-    $NAVIGATION
-\*------------------------------------*/
-.nav {
-  clear: both;
-  overflow: hidden;
-  max-height: 0;
-}
-.nav a {
-  display: block;
-  padding: 1em;
-  border-top: 1px solid #eeeeee;
-}
-.nav.active {
-  max-height: 40em;
-}
-@media all and (min-width: 46.8em) {
-  .nav {
-    max-height: none;
-    float: right;
-    clear: none;
-  }
-  .nav li {
-    float: left;
-  }
-  .nav a {
-    border: 0;
-  }
-}
-
-.pagination {
-  overflow: hidden;
-}
-.pagination li {
-  float: left;
-  border-right: 1px solid #eeeeee;
-}
-.pagination li:last-child {
-  border: 0;
-}
-.pagination a {
-  padding: 1em;
-}
-
-/*------------------------------------*\
-    $MAIN CONTENT AREA
-\*------------------------------------*/
-[role='main'] {
-  padding: 0.5em 0.5em 2em;
-  overflow: hidden;
-}
-
-/*------------------------------------*\
-    $FOOTER
-\*------------------------------------*/
-.footer {
-  clear: both;
-  overflow: hidden;
-  background: #131313;
-  color: white;
-  line-height: 1.2;
-}
-.footer a {
-  color: #f9f9f9;
-}
-
-.nav-footer {
-  margin: -1em -1em 1em;
-}
-.nav-footer li {
-  border-bottom: 1px solid #333333;
-}
-@media all and (min-width: 46.8em) {
-  .nav-footer li {
-    border: 0;
-    float: left;
-  }
-}
-.nav-footer a {
-  display: block;
-  padding: 1em;
-}
-
-@media all and (min-width: 46.8em) {
-  .copyright {
-    float: right;
-  }
-}
-
-/*------------------------------------*\
-    $TEXT Styles
-\*------------------------------------*/
-.intro {
-  font-size: 1.0625em;
-  font-weight: bold;
-}
-
-.pullquote {
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.4375em;
-}
-
-.caption {
-  font-style: italic;
-}
-
-.text a {
-  text-decoration: underline;
-}
-.text ul {
-  list-style: disc;
-  margin: 0 0 1em 1.2em;
-}
-.text ul ul {
-  margin-bottom: 0;
-}
-.text ol {
-  list-style: decimal;
-  margin: 0 0 1em 1.5em;
-}
-.text ol ol {
-  margin-bottom: 0;
-}
-
-/*------------------------------------*\
-    $COMPONENTS
-\*------------------------------------*/
-/* Icon Font */
-@font-face {
-  font-family: 'icons';
-  src: url('../fonts/icons.eot');
-  src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/icons.woff') format('woff'),
-    url('../fonts/icons.ttf') format('truetype'),
-    url('../fonts/icons.svg#icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-  font-family: 'icons';
-  content: attr(data-icon);
-  speak: none;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-
-.icon-twitter:before,
-.icon-stumbleupon:before,
-.icon-pinterest:before,
-.icon-linkedin:before,
-.icon-google-plus:before,
-.icon-search:before,
-.icon-play:before,
-.icon-menu:before,
-.icon-arrow-left:before,
-.icon-arrow-right:before,
-.icon-bubble:before,
-.icon-facebook:before,
-.icon-feed:before,
-.icon-youtube:before,
-.icon-tag:before,
-.icon-tumblr:before,
-.icon-instagram,
-.icon-podcast,
-.icon-apple,
-.icon-android,
-.icon-arrow:after,
-.icon-envelope:before {
-  font-family: 'icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-
-.icon-twitter:before {
-  content: '\74';
-}
-
-.icon-stumbleupon:before {
-  content: '\75';
-}
-
-.icon-pinterest:before {
-  content: '\70';
-}
-
-.icon-linkedin:before {
-  content: '\69';
-}
-
-.icon-google-plus:before {
-  content: '\67';
-}
-
-.icon-search:before {
-  content: '\73';
-}
-
-.icon-play:before {
-  content: '\61';
-}
-
-.icon-menu:before {
-  content: '\21';
-}
-
-.icon-arrow-left:before {
-  content: '\23';
-}
-
-.icon-arrow-right:before {
-  content: '\24';
-}
-
-.icon-bubble:before {
-  content: '\25';
-}
-
-.icon-facebook:before {
-  content: '\66';
-}
-
-.icon-feed:before {
-  content: '\27';
-}
-
-.icon-youtube:before {
-  content: '\79';
-}
-
-.icon-tag:before {
-  content: '\28';
-}
-
-.icon-tumblr:before {
-  content: '\6d';
-}
-
-.icon-instagram:before {
-  content: '\22';
-}
-
-.icon-podcast:before {
-  content: '\26';
-}
-
-.icon-android:before {
-  content: '\29';
-}
-
-.icon-apple:before {
-  content: '\2a';
-}
-
-.icon-envelope:before {
-  content: '\2b';
-}
-
-.icon-arrow:after {
-  content: '\61';
-  display: inline-block;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.icon-play:before {
-  font-size: 0.7rem;
-  padding-left: 0.2em;
-}
-
-.icon-play-box {
-  display: block;
-  margin-left: 2em;
-}
-
-.icon-play-box:before {
-  padding: 0.25em;
-  background: gray;
-  color: white;
-  margin-left: -1.7rem;
-  margin-right: 0.5em;
-}
-
-/*------------------------------------*\
-    $BUTTONS
-\*------------------------------------*/
-.btn {
-  display: inline-block;
-  background: #333333;
-  color: white;
-  line-height: 1;
-  font-weight: bold;
-  padding: 1em;
-  border: 0;
-  text-align: center;
-}
-.btn:hover,
-.btn:focus {
-  background: gray;
-  color: white;
-}
-.btn.disabled {
-  background: #eeeeee;
-  color: gray;
-}
-
-.btn-small {
-  padding: 0.5em;
-}
-
-.btn-large {
-  padding: 0.5em;
-  text-transform: uppercase;
-  background: gray;
-  font-size: 1.4rem;
-  font-weight: normal;
-}
-
-.text-btn {
-  font-style: italic;
-}
-
-/* Generic Placeholder Brick: REMOVE FOR PRODUCTION */
-.brick {
-  background: #dcdddc;
-  padding: 2em;
-  text-align: center;
-  font-weight: bold;
-  border-bottom: 1px solid #eeeeee;
-}
-
-/* Block */
-.block {
-  overflow: hidden;
-}
-.block p:last-child {
-  margin-bottom: 0;
-}
-
-.headline {
-  line-height: 1.2;
-}
-
-/* Hero Block */
-.block-hero {
-  margin-bottom: 0.5em;
-}
-.block-hero .b-thumb img {
-  display: block;
-}
-@media all and (min-width: 50em) {
-  .block-hero {
-    position: relative;
-  }
-  .block-hero .b-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 1.5em;
-  }
-}
-
-/* Block Thumbnail with Headline */
-.block-thumb {
-  display: table;
-  width: 100%;
-  border-collapse: collapse;
-}
-.block-thumb .b-inner {
-  display: table-row;
-  vertical-align: top;
-  overflow: hidden;
-}
-@media all and (min-width: 29.75em) {
-  .block-thumb .b-thumb {
-    display: table-cell;
-    vertical-align: top;
-    width: 30%;
-    max-width: 10em;
-  }
-  .block-thumb .b-thumb img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-}
-@media all and (min-width: 29.75em) {
-  .block-thumb .b-text {
-    display: table-cell;
-    width: 70%;
-    padding: 0 1em;
-  }
-}
-
-/* Block Headline Summary */
-.block-headline-summary a {
-  display: block;
-  padding: 0.5em;
-}
-
-/* Block Inset */
-.block-inset {
-  position: relative;
-}
-.block-inset .b-thumb {
-  position: relative;
-  z-index: 0;
-}
-.block-inset .b-thumb img {
-  display: block;
-}
-
-/* Hero Block */
-.block-inset {
-  margin-bottom: 0.5em;
-  position: relative;
-}
-.block-inset .headline {
-  font-size: 1.1em;
-}
-.block-inset .b-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 0.5em;
-}
-
-/* Block Thumb with Summary */
-.block-thumb-summary .b-thumb {
-  float: left;
-  width: 50%;
-}
-.block-thumb-summary .b-text {
-  margin-left: 50%;
-  padding: 0.5em;
-}
-
-.inline-list li {
-  display: inline-block;
-}
-
-/* Social List */
-.social-list li {
-  margin: 0 0.4rem 1em 0;
-}
-.social-list a {
-  font-size: 1.6em;
-}
-
-/* Headline List */
-.headline-list {
-  margin-bottom: 1em;
-}
-.headline-list.flush {
-  margin: 0;
-}
-.headline-list h4 {
-  font-weight: normal;
-}
-.headline-list li {
-  padding: 0.25em 0;
-  border-top: 1px solid #dddddd;
-}
-
-/* Post List */
-.post-list li {
-  margin-bottom: 1em;
-}
-
-/* Bullet List */
-.bullet-list {
-  list-style: square;
-  margin: 0 0 1em 1.2em;
-  line-height: 1.3;
-}
-.bullet-list li {
-  margin-bottom: 1em;
-}
-
-/* Text List */
-.text-list {
-  margin: 0 0 1em;
-  line-height: 1.3;
-}
-.text-list li {
-  margin-bottom: 1em;
-}
-
-.tooltip-container {
-  display: inline-block;
-  position: relative;
-}
-.tooltip-container:hover .tooltip {
-  display: block;
-}
-
-.tooltip-link {
-  background: #f9f9f9;
-}
-
-.tooltip {
-  display: none;
-  position: absolute;
-  top: 1.5em;
-  left: 0;
-  width: 18em;
-  padding: 1em;
-  background: white;
-  border: 1px solid gray;
-  box-shadow: 0.3em 0.3em 1em 0 rgba(0, 0, 0, 0.2);
-}
-.tooltip h2 {
-  margin-top: 0;
-}
-@media all and (min-width: 24em) {
-  .tooltip {
-    width: 22em;
-  }
-}
-@media all and (min-width: 29.75em) {
-  .tooltip {
-    width: 27em;
-  }
-}
-@media all and (min-width: 39.8em) {
-  .tooltip {
-    width: 30em;
-  }
-}
-
-.accordion {
-  margin-bottom: 1em;
-}
-
-.acc-handle {
-  background: #131313;
-  color: white;
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
-  display: block;
-  position: relative;
-  padding: 0.5em;
-  border-bottom: 1px solid #dddddd;
-}
-.acc-handle:after {
-  content: '+';
-  float: right;
-}
-.acc-handle:hover {
-  color: white;
-  background: #333333;
-}
-.acc-handle.active {
-  background: #333333;
-}
-.acc-handle.active:after {
-  content: '-';
-}
-
-.tabs {
-  overflow: hidden;
-}
-.tabs ul {
-  display: table;
-  width: 100%;
-}
-.tabs li {
-  display: table-cell;
-  text-align: center;
-  border-right: 1px solid #dddddd;
-}
-.tabs li:last-child {
-  border-right: 0;
-}
-.tabs a {
-  display: block;
-  padding: 0.5em;
-  background: gray;
-}
-.tabs a:hover,
-.tabs a:focus {
-  background: #dddddd;
-}
-.tabs a.active {
-  background: #333333;
-  color: white;
-}
-
-.section {
-  margin: 0 0 1em;
-}
-
-.section-title {
-  margin-bottom: 0.5em;
-}
-
-.article-header h1 {
-  font-size: 2.5em;
-}
-
-.byline {
-  font-size: 0.875em;
-  font-style: italic;
-  margin-bottom: 0.5em;
-}
-
-.social-share {
-  overflow: hidden;
-  margin-bottom: 1em;
-}
-.social-share li {
-  float: left;
-  margin-right: 0.5em;
-}
-.social-share a {
-  background: #333333;
-  color: white;
-  display: block;
-  padding: 0.5em;
-}
-.social-share a:hover {
-  background: gray;
-}
-
-.comments li {
-  margin-bottom: 1em;
-}
-
-.comment-container {
-  overflow: hidden;
-  margin-bottom: 1em;
-  list-style: none;
-}
-
-.comment-meta {
-  float: left;
-  width: 6.5em;
-}
-.comment-meta img {
-  display: block;
-  border: 1px solid #eeeeee;
-  margin-bottom: 0.5em;
-}
-
-.comment-name {
-  font-size: 0.75em;
-}
-
-.comment-text {
-  margin-left: 9em;
-}
-
-/*------------------------------------*\
-    $MESSAGING
-\*------------------------------------*/
-.alert {
-  text-align: center;
-  padding: 1em;
-  margin-bottom: 0.5em;
-  border: 1px solid gray;
-  background: #f9f9f9;
-}
-
-.alert-error {
-  color: red;
-  border-color: red;
-  background: #ffbebe;
-}
+/**
+ * Margin bottom none
+ * 1) Force margin bottom of 0
+ */
+.u-margin-bottom-none {
+  margin-bottom: 0 !important; }
+
+/**
+ * Margin bottom small
+ * 1) Force margin bottom of $spacing-small variable
+ */
+.u-margin-bottom-small {
+  margin-bottom: 1rem !important; }
+
+/**
+ * Margin bottom
+ * 1) Force margin bottom of $spacing variable
+ */
+.u-margin-bottom {
+  margin-bottom: 1rem !important; }
+
+/**
+ * Margin bottom large
+ * 1) Force margin bottom of $spacing-large variable
+ */
+.u-margin-bottom-large {
+  margin-bottom: 2rem !important; }
+
+.u-margin-bottom-large-to-xxl {
+  margin-bottom: 2rem !important; }
+  @media all and (min-width: 60em) {
+    .u-margin-bottom-large-to-xxl {
+      margin-bottom: 8rem !important; } }
+
+/**
+ * Margin top none
+ * 1) Force margin top of 0
+ */
+.u-margin-top-none {
+  margin-top: 0 !important; }
+
+/**
+ * Margin top small
+ * 1) Force margin top of $spacing-small variable
+ */
+.u-margin-top-small {
+  margin-top: 1rem !important; }
+
+/**
+ * Margin top
+ * 1) Force margin top of $spacing variable
+ */
+.u-margin-top {
+  margin-top: 1rem !important; }
+
+/**
+ * Margin top large
+ * 1) Force margin top of $spacing-large variable
+ */
+.u-margin-top-large {
+  margin-top: 2rem !important; }
+
+.u-margin-top-booking {
+  margin-top: 28rem !important; }
+
+/**
+ * Margin right none
+ * 1) Force margin right of 0
+ */
+.u-margin-right-none {
+  margin-right: 0 !important; }
+
+/**
+ * Margin right small
+ * 1) Force margin right of $spacing-small variable
+ */
+.u-margin-right-small {
+  margin-right: 1rem !important; }
+
+/**
+ * Margin right
+ * 1) Force margin right of $spacing variable
+ */
+.u-margin-right {
+  margin-right: 1rem !important; }
+
+/**
+ * Margin right large
+ * 1) Force margin right of $spacing-large variable
+ */
+.u-margin-right-large {
+  margin-right: 2rem !important; }
+
+/**
+ * Margin left none
+ * 1) Force margin left of 0
+ */
+.u-margin-left-none {
+  margin-left: 0 !important; }
+
+/**
+ * Margin left small
+ * 1) Force margin left of $spacing-small variable
+ */
+.u-margin-left-small {
+  margin-left: 1rem !important; }
+
+/**
+ * Margin left
+ * 1) Force margin left of $spacing variable
+ */
+.u-margin-left {
+  margin-left: 1rem !important; }
+
+/**
+ * Margin left large
+ * 1) Force margin left of $spacing-large variable
+ */
+.u-margin-left-large {
+  margin-left: 2rem !important; }
+
+/**
+ * Center display block contents
+ */
+.u-margin-center {
+  margin: 0 auto !important; }
+
+/**
+ * Padding none
+ */
+.u-padding-none {
+  padding: 0 !important; }
+
+/**
+ * Padding small
+ */
+.u-padding-small {
+  padding: 1rem !important; }
+
+/**
+ * Padding
+ */
+.u-padding {
+  padding: 1rem !important; }
+
+/**
+ * Padding large
+ */
+.u-padding-large {
+  padding: 2rem !important; }
+
+/**
+ * Padding top none
+ */
+.u-padding-top-none {
+  padding-top: 0 !important; }
+
+/**
+ * Padding top small
+ */
+.u-padding-top-small {
+  padding-top: 1rem !important; }
+
+/**
+ * Padding top
+ */
+.u-padding-top {
+  padding-top: 1rem !important; }
+
+/**
+ * Padding top large
+ */
+.u-padding-top-large {
+  padding-top: 2rem !important; }
+
+/**
+ * Padding bottom none
+ */
+.u-padding-bottom-none {
+  padding-bottom: 0 !important; }
+
+/**
+ * Padding bottom small
+ */
+.u-padding-bottom-small {
+  padding-bottom: 1rem !important; }
+
+/**
+ * Padding bottom
+ */
+.u-padding-bottom {
+  padding-bottom: 1rem !important; }
+
+/**
+ * Padding bottom large
+ */
+.u-padding-bottom-large {
+  padding-bottom: 2rem !important; }
+
+/**
+ * Padding right none
+ */
+.u-padding-right-none {
+  padding-right: 0 !important; }
+
+/**
+ * Padding right small
+ */
+.u-padding-right-small {
+  padding-right: 1rem !important; }
+
+/**
+ * Padding right
+ */
+.u-padding-right {
+  padding-right: 1rem !important; }
+
+/**
+ * Padding right large
+ */
+.u-padding-right-large {
+  padding-right: 2rem !important; }
+
+/**
+ * Padding left none
+ */
+.u-padding-left-none {
+  padding-left: 0 !important; }
+
+/**
+ * Padding left small
+ */
+.u-padding-left-small {
+  padding-left: 1rem !important; }
+
+/**
+ * Padding left
+ */
+.u-padding-left {
+  padding-left: 1rem !important; }
+
+/**
+ * Padding left large
+ */
+.u-padding-left-large {
+  padding-left: 2rem !important; }
